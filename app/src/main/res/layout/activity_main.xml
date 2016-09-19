@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:weightSum="3">
 
-    <Button
-        android:text="Simple Notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button"
-        android:onClick="simple"/>
+  <Button
+	android:id="@+id/button"
+	android:layout_width="fill_parent"
+	android:layout_height="0dp"
+	android:layout_weight="1"
+	android:textSize="30sp"
+	android:onClick="simple"
+	android:text="Simple Notification"/>
 
-    <Button
-        android:text="Notification with button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="withButton"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+  <Button
+	android:id="@+id/button2"
+	android:layout_width="fill_parent"
+	android:layout_height="0dp"
+	android:textSize="30sp"
+	android:layout_weight="1"
+	android:onClick="withButton"
+	android:text="Notification with button"/>
+
+  <Button
+	android:layout_width="fill_parent"
+	android:layout_height="0dp"
+	android:textSize="30sp"
+	android:layout_weight="1"
+	android:onClick="largeNotification"
+	android:text="Large Notification"/>
+</LinearLayout>
